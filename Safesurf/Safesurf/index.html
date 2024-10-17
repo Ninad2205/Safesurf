@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Safesurf-Helps To Detecting Phishing.</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- Header Scetion -->
+    <header>
+      <!-- Logo section -->
+      <div class="logo">
+        <span class="safe">Safe</span><span class="surf">surf</span>
+      </div>
+
+      <!-- Navbar section -->
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#intro">Introduction</a></li>
+          <li><a href="#types">Types</a></li>
+          <li><a href="#precautions">Precautions</a></li>
+          <li><a href="#about">About</a></li>
+          <button>
+            <a href="http://127.0.0.1:5000" target="_blank">Predition</a>
+          </button>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Body Section -->
+    <body>
+      <!-- Hero section -->
+      <div class="hero">
+        <h1>Welcome <span class="to">to</span> Safesurf <span>!</span></h1>
+        <h3>
+          This Website Help You To Detect And Prevent Phishing By Using ML
+          Algorithm.
+        </h3>
+      </div>
+
+      <!-- Home section -->
+      <div class="home" id="home">
+        <div class="home_containt">
+          <h1>Overview:</h1>
+          <p>
+            Welcome to the Safesurf! This initiative aims to combat the rising
+            threat of phishing attacks, which pose significant risks to
+            individuals and organizations alike. Through innovative detection
+            methods, we strive to enhance online security and protect sensitive
+            information from malicious actors.
+          </p>
+          <h1>Purpose:</h1>
+          <p>
+            Phishing attacks are one of the most prevalent forms of cybercrime,
+            exploiting human psychology to deceive victims into sharing personal
+            information. As the internet becomes an integral part of our daily
+            lives, understanding and detecting phishing attempts is crucial.
+            This project emphasizes the importance of identifying phishing URLs
+            to prevent data breaches, financial loss, and identity theft. By
+            educating users and deploying effective detection techniques, we can
+            create a safer online environment.
+          </p>
+        </div>
+      </div>
+
+      <!-- Introduction section -->
+      <div class="intro" id="intro">
+        <div class="intro_containt">
+          <div class="img">
+            <img src="./photos/Intro1.jpg" alt="introduction section photo" />
+          </div>
+          <div class="containt">
+            <h1>Introduction</h1>
+            <h2>Definition of Phishing:</h2>
+            <p>
+              Phishing is a cybercrime technique where attackers impersonate
+              trustworthy entities to deceive individuals into divulging
+              sensitive information, such as usernames, passwords, and financial
+              details. These deceptive practices often take place through
+              emails, messages, or malicious websites that appear legitimate.
+              The impact of phishing can be severe, leading to identity theft,
+              financial loss, and unauthorized access to sensitive data.
+              According to recent statistics, phishing is responsible for a
+              significant portion of cyberattacks, making it a critical issue
+              for individuals and organizations alike.
+            </p>
+            <h3>How Phishing Works</h3>
+            <p>
+              Phishing attacks typically rely on social engineering tactics to
+              manipulate victims into taking action.
+            </p>
+            <h5>Common methods include:</h5>
+            <p>
+              Deceptive Emails: Attackers send emails that appear to come from
+              reputable sources, prompting recipients to click on malicious
+              links or download attachments.
+            </p>
+            <p>
+              Clone Phishing: Attackers replicate legitimate emails and replace
+              the original links with malicious ones, tricking recipients into
+              clicking on them.
+            </p>
+            <h2>Importance of Detection:</h2>
+            <h5>
+              Effective detection of phishing URLs is essential for several
+              reasons:
+            </h5>
+            <p>
+              Preventing Financial Loss: By identifying and blocking phishing
+              attempts, organizations can protect themselves and their customers
+              from financial scams and data breaches.
+            </p>
+            <p>
+              Protecting Sensitive Data: Detection helps safeguard personal and
+              confidential information, reducing the risk of identity theft and
+              unauthorized access.
+            </p>
+            <p>
+              Maintaining Trust: Organizations that effectively protect their
+              users from phishing attacks maintain their reputation and the
+              trust of their customers.
+            </p>
+            <p>
+              Combatting Evolving Threats: Phishing tactics are constantly
+              evolving, making it crucial to employ advanced detection methods
+              that can adapt to new threats.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Types section -->
+      <div class="types" id="types">
+        <h1>Types of Phishing</h1>
+        <div class="types_containt">
+          <div class="type">
+            <h3>1.Email Phishing</h3>
+            <p>
+              Email phishing is the most common form of phishing attack.
+              Attackers send fraudulent emails that appear to be from reputable
+              organizations, aiming to deceive recipients into clicking on
+              malicious links or providing personal information.
+            </p>
+            <h4>Examples:</h4>
+            <p>
+              An email that looks like it’s from a bank, asking the recipient to
+              verify account details through a link. A message claiming to be
+              from an online service, offering a reward but requiring the user
+              to enter their login credentials.
+            </p>
+          </div>
+          <div class="type">
+            <h3>2. Spear Phishing</h3>
+            <p>
+              Spear phishing is a more targeted approach where attackers focus
+              on a specific individual or organization. By using personal
+              information gathered from social media or other sources, they
+              craft convincing messages to increase the likelihood of success.
+            </p>
+            <h4>Characteristics:</h4>
+            <p>
+              Personalized content that includes the victim’s name or specific
+              details. Often appears to come from someone the victim knows, such
+              as a colleague or friend. Higher success rates due to the tailored
+              nature of the attack.
+            </p>
+          </div>
+          <div class="type">
+            <h3>3. Whaling</h3>
+            <p>
+              Whaling is a type of phishing attack that targets high-profile
+              individuals, such as executives or high-ranking officials within
+              an organization. The stakes are higher, and the attackers often
+              invest more effort in crafting convincing messages.
+            </p>
+            <h4>Characteristics:</h4>
+            <p>
+              Emails that seem highly legitimate and may reference sensitive
+              company information. Often aimed at obtaining large sums of money
+              or sensitive corporate data. Utilizes social engineering tactics
+              that exploit the target’s authority.
+            </p>
+          </div>
+          <div class="type">
+            <h3>4. Clone Phishing</h3>
+            <p>
+              Clone phishing occurs when attackers create an identical copy of a
+              legitimate email that the victim has previously received. The
+              attackers replace any links with malicious ones, tricking the
+              recipient into thinking they’re accessing a trusted resource.
+            </p>
+            <h4>Explanation:</h4>
+            <p>
+              The original email is used as a template, making it seem familiar
+              to the victim. Victims are often less cautious because the email
+              appears legitimate. Commonly used for follow-up phishing attacks
+              after the victim has already interacted with the legitimate
+              message.
+            </p>
+          </div>
+          <div class="type">
+            <h3>5. Smishing and Vishing</h3>
+            <p>
+              Smishing (SMS phishing) and vishing (voice phishing) are phishing
+              techniques that use SMS and phone calls, respectively, to deceive
+              victims.
+            </p>
+            <h3>Smishing:</h3>
+            <p>
+              Attackers send fraudulent text messages that often include a link
+              or prompt the user to call a number. Example: A text claiming to
+              be from a bank asking the recipient to confirm account information
+              via a link.
+            </p>
+            <h3>Vishing:</h3>
+            <p>
+              Attackers impersonate legitimate entities over the phone,
+              attempting to extract personal information.
+            </p>
+            <h4>Example:</h4>
+            <p>
+              A call from someone pretending to be from tech support, asking the
+              victim to provide sensitive information to "resolve an issue."
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Precautions section -->
+      <div class="precautions" id="precautions">
+        <div class="precautions_containt">
+          <div class="containt">
+            <h1>Precautions</h1>
+            <h2>1. Best Practices</h2>
+            <h5>
+              To minimize the risk of falling victim to phishing attacks, users
+              should adopt the following best practices:
+            </h5>
+            <p>
+              Verify Email Addresses: Always check the sender's email address
+              for discrepancies. Look for slight misspellings or unusual
+              domains.
+            </p>
+            <p>
+              Hover Over Links: Before clicking on a link, hover your mouse over
+              it to see the actual URL. Be cautious of URLs that look suspicious
+              or don’t match the expected domain.
+            </p>
+            <p>
+              Look for HTTPS: Ensure the website URL starts with "https://" when
+              entering sensitive information. The "s" indicates a secure
+              connection.
+            </p>
+            <p>
+              Be Wary of Urgency: Phishing messages often create a sense of
+              urgency. Take a moment to evaluate the situation and verify the
+              request through official channels.
+            </p>
+            <p>
+              Do Not Share Personal Information: Legitimate organizations
+              typically do not ask for sensitive information via email or text.
+              Avoid sharing personal details unless you are sure of the
+              recipient’s identity.
+            </p>
+            <p>
+              Enable Two-Factor Authentication (2FA): Use 2FA whenever possible
+              to add an extra layer of security to your accounts.
+            </p>
+            <h2>2. Tools and Resources</h2>
+            <h5>
+              Several tools and resources can help detect phishing URLs and
+              enhance online security:
+            </h5>
+            <p>
+              Phishing URL Checkers: Websites like VirusTotal or PhishTank allow
+              users to check URLs for reported phishing activity.
+            </p>
+            <p>
+              Browser Extensions: Tools like Netcraft or McAfee WebAdvisor
+              provide real-time protection by warning users about suspicious
+              websites and phishing attempts.
+            </p>
+            <p>
+              Email Filtering Software: Utilize email filtering tools that help
+              detect and filter out phishing emails before they reach your
+              inbox.
+            </p>
+            <p>
+              Security Suites: Comprehensive security solutions, such as Norton,
+              Bitdefender, or Kaspersky, often include phishing detection
+              features as part of their packages.
+            </p>
+            <h2>3. Education</h2>
+            <h5>
+              Raising awareness and providing training on phishing threats is
+              crucial for individuals and organizations:
+            </h5>
+            <p>
+              Awareness Campaigns: Regularly conduct campaigns to educate users
+              about the latest phishing tactics and how to recognize them.
+            </p>
+            <p>
+              Training Programs: Implement training sessions or workshops that
+              simulate phishing attacks to help users identify and respond to
+              threats effectively.
+            </p>
+            <p>
+              Sharing Resources: Distribute materials, such as brochures or
+              online courses, that provide guidance on safe online practices and
+              phishing awareness.
+            </p>
+            <p>
+              Regular Updates: Keep users informed about new phishing techniques
+              and trends, reinforcing the importance of vigilance.
+            </p>
+            <p>
+              By fostering a culture of awareness and proactive defense,
+              organizations can significantly reduce the risk of phishing
+              attacks and protect their sensitive information.
+            </p>
+          </div>
+          <div class="img">
+            <img src="./photos/precaution.jpg" alt="precaution section photo" />
+          </div>
+        </div>
+      </div>
+
+      <!-- About section -->
+      <div class="about" id="about">
+        <div class="about_containt">
+          <h1>About</h1>
+          <p>
+            Welcome to Safesurf, your trusted resource for identifying and
+            preventing phishing threats online. In today’s digital world,
+            phishing attacks are becoming increasingly sophisticated, posing
+            significant risks to individuals and businesses alike. Our mission
+            is to empower users with the tools and knowledge to protect
+            themselves from these malicious attempts.
+          </p>
+          <p>
+            At Safesurf, we utilize advanced algorithms and a comprehensive
+            database of known phishing URLs to provide accurate and real-time
+            detection. Whether you're a casual internet user or a cybersecurity
+            professional, our platform is designed to help you navigate the web
+            safely.
+          </p>
+          <p>
+            Our team is dedicated to continuously updating our detection methods
+            and expanding our database to stay ahead of emerging threats. We
+            believe in the importance of community collaboration, which is why
+            we encourage users to report suspicious URLs and share their
+            experiences.
+          </p>
+          <p>
+            Together, we can create a safer online environment. Thank you for
+            trusting Safesurf in your quest for online security
+          </p>
+        </div>
+      </div>
+    </body>
+
+    <!-- Footer Section -->
+    <footer>
+      <div class="footer_containt">
+        <div class="contact">
+          <h1>Contact Us</h1>
+          <p>Email:safesurf@123.com</p>
+          <p>Phon:+121 92435 23465</p>
+          <p>Address:123,MG Road Bangalore,Karnataka 560001 India</p>
+        </div>
+        <div class="links">
+          <h1>Quack Links</h1>
+          <nav>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#intro">Introduction</a></li>
+              <li><a href="#types">Types</a></li>
+              <li><a href="#precautions">Precautions</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="prediction.html" target="_blank">Predition</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="followUs">
+          <h1>Follow Us</h1>
+          <a href="https://www.facebook.com/" target="_blank">
+            <i class="fa-brands fa-square-facebook"></i
+          ></a>
+          <a href="https://www.instagram.com/"
+          target="_blank"><i class="fa-brands fa-square-instagram"></i
+          ></a>
+          <a href="https://in.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://x.com/?lang=en-in" target="_blank">
+            <i class="fa-brands fa-square-twitter"></i
+          ></a>
+        </div>
+      </div>
+      <div class="right">
+        <p>&copy;2024.All right reserved</p>
+      </div>
+    </footer>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="index_Gsap.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
