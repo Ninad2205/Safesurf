@@ -14,25 +14,25 @@
 
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f4f7f6;
-            color: #333;
+            background-color: black;
+            color: #f4f7f6;
             line-height: 1.6;
             padding: 20px;
         }
 
         h1 {
             text-align: center;
-            color: #2c3e50;
+            color: orange;
             margin-bottom: 20px;
         }
 
         .container {
             max-width: 600px;
             margin: 0 auto;
-            background-color: #fff;
+            background-color: #2c3e50;
             padding: 30px;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         form {
@@ -43,7 +43,7 @@
 
         label {
             font-size: 1.1rem;
-            color: #555;
+            color: #f4f7f6;
         }
 
         input[type="text"] {
@@ -63,7 +63,7 @@
         button {
             padding: 10px;
             font-size: 1.1rem;
-            background-color: #3498db;
+            background-color: #e67e22;
             color: white;
             border: none;
             border-radius: 4px;
@@ -72,7 +72,24 @@
         }
 
         button:hover {
-            background-color: #2980b9;
+            background-color: #d35400;
+        }
+
+        /* Progress bar */
+        .progress-container {
+            margin-top: 20px;
+            width: 100%;
+            background-color: #ddd;
+            border-radius: 4px;
+            display: none;
+        }
+
+        .progress-bar {
+            width: 0;
+            height: 20px;
+            background-color: #3498db;
+            border-radius: 4px;
+            transition: width 0.5s;
         }
 
         .result {
@@ -82,6 +99,8 @@
             border-radius: 5px;
             border: 1px solid #ddd;
             text-align: center;
+            color: #333;
+            display: none;
         }
 
         .result strong {
@@ -101,6 +120,14 @@
             input[type="text"], button {
                 font-size: 1rem;
             }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .result {
+                font-size: 0.9rem;
+            }
         }
     </style>
 </head>
@@ -117,7 +144,13 @@
             <button type="submit">Check</button>
         </form>
 
-        <div class="result" id="result" style="display: none;">
+        <!-- Progress bar -->
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <!-- Result section -->
+        <div class="result" id="result">
             <p><strong>Secure:</strong> <span id="secure"></span></p>
             <p><strong>Phishing:</strong> <span id="phishing"></span></p>
         </div>
@@ -133,23 +166,53 @@
             var formData = new FormData();
             formData.append('input', inputText);
             formData.append('type', type);
-            
-            fetch('/predict', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.json())
-            .then(data => {
-                var resultDiv = document.getElementById('result');
-                var secureText = document.getElementById('secure');
-                var phishingText = document.getElementById('phishing');
-                
-                secureText.textContent = data.result.secure;
-                phishingText.textContent = data.result.phishing;
 
-                resultDiv.style.display = 'block';  // Show result
-            })
-            .catch(error => console.error('Error:', error));
+            // Show progress bar
+            var progressBar = document.getElementById('progressBar');
+            var progressContainer = document.querySelector('.progress-container');
+            progressContainer.style.display = 'block';
+            progressBar.style.width = '0%';
+            
+            // Simulate progress
+            var progress = 0;
+            var interval = setInterval(function() {
+                if (progress < 100) {
+                    progress += 20;
+                    progressBar.style.width = progress + '%';
+                }
+            }, 500); // Update progress every 500ms
+
+            // Simulate the fetch request (for demonstration)
+            setTimeout(function() {
+                fetch('/predict', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    clearInterval(interval);  // Stop the progress simulation
+                    
+                    // Hide the progress bar and show the result
+                    progressBar.style.width = '100%';
+                    setTimeout(() => {
+                        progressContainer.style.display = 'none';
+                        
+                        var resultDiv = document.getElementById('result');
+                        var secureText = document.getElementById('secure');
+                        var phishingText = document.getElementById('phishing');
+                        
+                        secureText.textContent = data.result.secure;
+                        phishingText.textContent = data.result.phishing;
+                        
+                        resultDiv.style.display = 'block';  // Show result
+                    }, 500);
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    clearInterval(interval);
+                    progressContainer.style.display = 'none';
+                });
+            }, 3000);  // Simulate request time
         });
     </script>
 
